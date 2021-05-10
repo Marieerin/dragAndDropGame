@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function draggingShapes() {
+
+  let shapes = ['.square', '.circle', '.triangle']
+
+  let start = () => {
+    console.log(Math.floor(Math.random() * shapes.length));
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/*   SHAPE PORT -------------------------------------- */}
+      <div className="shapePort">
+        <div className="square"></div>
+        <div className="triangle"></div>
+        <div className="circle"></div>
+      </div>
+      <div className="dragPort">
+        <button onClick={start}>start</button>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default draggingShapes;

@@ -24,7 +24,7 @@
 .square {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: #7c388f;
 }
 
 .triangle {
@@ -32,13 +32,13 @@
   width: 0;
   border-right: 50px solid transparent;
   border-left: 50px solid transparent;
-  border-bottom: 100px solid green;
+  border-bottom: 100px solid #4c8000;
 }
 
 .circle {
   width: 100px;
   height: 100px;
-  background-color: yellow;
+  background-color: #ffbf00;
   border-radius: 50%;
 }
 

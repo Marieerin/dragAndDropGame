@@ -1,16 +1,51 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+html {
+  text-align: center;
+  background-color: #f2c6a9;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+button,
+h1 {
+  font-family: 'Love Ya Like A Sister', sans-serif;
+}
+
+h1 {
+  color: rgb(208, 44, 44);
+}
+
+button {
+  font-size: calc(30px + 9vw);
+}
+
+#canvas {
   text-align: center;
   width: 100vw;
-  height: 100vh;
+  height: 77vh;
   display: flex;
   align-items: center;
 }
 
 .shapePort {
-  height: 90vh;
+  height: 60vh;
   background-color: beige;
   padding: 20px;
   margin-left: 20px;
+  border-radius: 7px; 
+  box-shadow: inset 0 0 7px #0000004f;
+}
+
+.dragPort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px;
+  height: 65vh;
+  width: 100%;
+  background-color: lightblue;
   border-radius: 7px; 
   box-shadow: inset 0 0 7px #0000004f;
 }
@@ -19,6 +54,7 @@
 .triangle,
 .circle {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .square {
@@ -42,11 +78,6 @@
   border-radius: 50%;
 }
 
-.dragPort {
-  margin: 0 20px;
-  height: 95vh;
-  width: 100%;
-  background-color: lightblue;
-  border-radius: 7px; 
-  box-shadow: inset 0 0 7px #0000004f;
+#restartButton {
+  color: black;
 }

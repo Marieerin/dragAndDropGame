@@ -14,21 +14,25 @@ h1 {
 
 h1 {
   color: rgb(208, 44, 44);
+  font-size: 35px;
 }
 
-button {
+#startButton {
   font-size: calc(30px + 9vw);
 }
 
 #canvas {
   text-align: center;
-  width: 100vw;
+  width: 99vw;
   height: 77vh;
   display: flex;
   align-items: center;
 }
 
 .shapePort {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 60vh;
   background-color: beige;
   padding: 20px;
@@ -52,7 +56,8 @@ button {
 
 .square, 
 .triangle,
-.circle {
+.circle,
+.pentagon {
   margin-bottom: 20px;
   position: relative;
 }
@@ -78,6 +83,55 @@ button {
   border-radius: 50%;
 }
 
+.pentagon {
+  position: relative;
+  top: 32px;
+  width: 54px;
+  box-sizing: content-box;
+  border-width: 50px 18px 0;
+  border-style: solid;
+  border-color: palevioletred transparent;
+}
+
+.pentagon:before {
+  content:"";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -85px;
+  left: -18px;
+  border-width: 0 45px 36px;
+  border-style: solid;
+  border-color: transparent transparent palevioletred;
+}
+
 #restartButton {
-  color: black;
+  color: white;
+  background: rgb(80, 80, 141);
+  padding: 10px 20px;
+  margin: 15px;
+  font-size: 25px;
+}
+
+
+/* MEDIA QUERIES --------------------------- */
+@media only screen and (orientation: portrait) {
+  #canvas {
+    flex-direction: column;
+  }
+  .shapePort {
+    flex-direction: row;
+    height: initial;
+    width: 79%;
+    margin: 20px;
+  }
+  .dragPort {
+    width: 85%;
+  }
+  .square, 
+  .triangle, 
+  .circle, 
+  .pentagon {
+    margin: 9px;
+  }
 }
